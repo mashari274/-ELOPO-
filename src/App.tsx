@@ -195,23 +195,27 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Phone</h4>
-                    <p className="text-slate-400">+62 812-3456-7890</p>
+                    <a href="tel:+6281112345678" className="text-slate-400 hover:text-amber-500 transition">+62 811-1234-5678</a>
                   </div>
                 </div>
               </div>
               <div className="mt-10 flex space-x-4">
-                <a href="#" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-instagram"></i></a>
-                <a href="#" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-facebook"></i></a>
-                <a href="#" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-facebook"></i></a>
+                <a href="https://wa.me/6281112345678" target="_blank" rel="noopener noreferrer" className="text-2xl text-slate-400 hover:text-amber-500 transition"><i className="fab fa-whatsapp"></i></a>
               </div>
             </div>
-            <div className="rounded-3xl overflow-hidden h-96 shadow-2xl bg-slate-800 flex items-center justify-center border border-slate-700">
-              {/* Placeholder for Map */}
-              <div className="text-center p-8">
-                <i className="fas fa-map-marked-alt text-6xl text-slate-600 mb-4"></i>
-                <p className="text-slate-400">Google Maps would be embedded here</p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-amber-500 underline uppercase text-xs font-bold tracking-widest">Open in Maps</a>
-              </div>
+            <div className="rounded-3xl overflow-hidden h-96 shadow-2xl bg-slate-800 flex items-center justify-center border border-slate-700 relative">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                loading="lazy" 
+                allowFullScreen 
+                referrerPolicy="no-referrer-when-downgrade" 
+                src="https://maps.google.com/maps?q=Ruko%20Gading%20Serpong,%20Tangerang,%20Banten&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="absolute inset-0"
+              ></iframe>
             </div>
           </div>
         </div>
